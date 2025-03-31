@@ -1,10 +1,10 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import Tasks from "../pages/Main/MainHome/components/Tasks";
+import TaskList from "../pages/Main/MainHome/components/TaskList";
 
 describe("TaskList Component", () => {
   test("Adding a task when clicking on the Add Task button, entering text in the field and sending it when clicking on the Submit button", () => {
     // Рендерим компонент
-    render(<Tasks />);
+    render(<TaskList />);
 
     // Находим кнопку "Add Task" для Backlog
     const addTaskButton = screen.getByText("Add Task");
