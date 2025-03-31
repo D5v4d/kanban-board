@@ -1,0 +1,189 @@
+@import "./mixin.scss";
+
+.Block {
+    position: relative;
+    display: flex;
+    width: 270px;
+    background-color: #EBECF0;
+    border-radius: 10px;
+    padding: 12px 0px 12px 12px;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 566px;
+
+    span {
+        font-size: $font-size;
+    }
+}
+
+.Tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 510px;
+    overflow-y: auto;
+
+    position: relative;
+    padding-right: 12px;
+
+    &::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #CBCBCB;
+        border-radius: $border-radius;
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: $border-radius;
+        background-color: $background-white;
+    }
+
+}
+
+.Task {
+    @include backgroundTasks;
+    padding-right: 35px;
+    font-size: $font-size;
+    color: #000000;
+    text-decoration: none;
+    overflow-wrap: break-word;
+}
+
+.Input {
+
+    background-color: $background-white;
+    border-radius: $border-radius;
+    padding: 2px 0px 2px 5px;
+    width: 253px;
+
+    textarea {
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 60%);
+        outline: none;
+        width: 242px;
+        font-size: $font-size;
+        min-height: 22px;
+        resize: none;
+    }
+}
+
+.BtnAddActiv {
+    display: flex;
+    width: 104px;
+    padding: 5px 5px 4px 5px;
+    gap: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 7px;
+    background: none;
+    margin-top: 3px;
+
+    &:hover {
+        background-color: $background-white;
+        border-radius: $border-radius;
+    }
+
+    span {
+        color: #5E6C84;
+    }
+
+}
+
+.BtnDisabled {
+    cursor: default;
+    background-color: #fb9898;
+    border-radius: $border-radius;
+
+    &:hover {
+        background-color: #fb9898;
+    }
+
+}
+
+.BtnSubmit {
+    width: 95px;
+    border: none;
+    cursor: pointer;
+    background-color: #0079BF;
+    border-radius: $border-radius;
+    font-size: $font-size;
+    color: #ffffff;
+    height: 29px;
+}
+
+.DropDownMenu {
+    display: flex;
+    flex-direction: row-reverse;
+    @include backgroundTasks;
+    text-align: right;
+    border: none;
+    min-height: 35px;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 35px;
+    margin-right: 12px;
+}
+
+
+.arrowDropDown {
+    width: 20px;
+    height: 13px;
+    background-image: url(../assets/svg/arrowDropDown.svg);
+}
+
+.DropDownList {
+    border-radius: $border-radius;
+    background-color: $background-white;
+    list-style: none;
+    padding-left: 0;
+    position: absolute;
+    top: 100%;
+    margin-top: -45px;
+    max-height: 66px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 258px;
+
+
+
+    &::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #CBCBCB;
+        border-radius: $border-radius;
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: $border-radius;
+    }
+    li {
+        padding: 5px;
+
+        &:hover {
+            background-color: #DEDEDE;
+            cursor: pointer;
+        }
+
+        &:first-child {
+            border-radius: 5px 0px 0px 0px;
+        }
+
+        &:last-child {
+            border-radius: 0px 0px 5px 5px;
+        }
+
+        button {
+            border: none;
+            background: none;
+            text-align: left;
+            cursor: pointer;
+            width: 236px;
+            font-size: $font-size;
+            overflow-wrap: break-word;
+        }
+    }
+}

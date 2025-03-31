@@ -1,0 +1,137 @@
+@import "./mixin.scss";
+
+.MainTasks {
+    display: flex;
+    background-color: #0079BF;
+    padding: 22px 28px 20px 26px;
+    justify-content: space-between;
+    min-height: 548px;
+    align-items: flex-start;
+}
+
+.TasksConteiner {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 1181px;
+    height: 548px;
+    justify-content: space-between;
+}
+
+.Task {
+    width: 614px;
+    margin-left: 30px;
+
+    h1 {
+        font-size: 24px;
+        font-weight: 400;
+        margin-top: 27px;
+        margin-bottom: 35px;
+    }
+
+    p {
+        font-size: 18px;
+        height: 360px;
+        overflow-wrap: break-word;
+        overflow-y: auto;
+    }
+
+    textarea {
+        display: block;
+        outline: none;
+        resize: none;
+        width: 605px;
+        padding: 10px 5px 5px 5px;
+    }
+
+    .TitleTask {
+        height: 21px;
+        margin-top: 27px;
+        margin-bottom: 35px;
+        border-radius: 5px;
+        
+    }
+    .TextTaskError{
+       border: 1px solid red;
+    }
+
+    .TextTask {
+        height: 394px;;
+    }
+}
+
+.Сlose {
+    width: 23px;
+    height: 23px;
+    border: none;
+    margin-top: 17px;
+    margin-right: 23px;
+    cursor: pointer;
+    background: none;
+    background-image: url(../assets/svg/close.svg);
+}
+
+.Сhange {
+    position: absolute;
+    margin-left: 1114px;
+    margin-top: 505px;
+    cursor: pointer;
+    background-color: #e7e7e7;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+
+
+
+@media screen and (max-width: 338px) {
+
+    .TasksConteiner {
+        width: 277px;
+    }
+
+    .Task {
+        width: 190px;
+        overflow-wrap: break-word;
+
+        h1 {
+            margin-top: 40px;
+        }
+
+        p {
+            width: 220px;
+            height: 360px;
+            overflow-wrap: break-word;
+            overflow-y: auto;
+        }
+
+        textarea {
+            width: 178px;
+        }
+
+        .TitleTask {
+            margin-top: 45px;
+            margin-bottom: 35px;
+        }
+
+        .TextTask {
+            height: 340px;
+        }
+    }
+
+    .Сlose {
+        width: 23px;
+        height: 23px;
+        border: none;
+        margin-top: 17px;
+        margin-right: 23px;
+        cursor: pointer;
+        background: none;
+        background-image: url(../assets/svg/close.svg);
+    }
+
+    .Сhange {
+        margin-left: 220px;
+    }
+}

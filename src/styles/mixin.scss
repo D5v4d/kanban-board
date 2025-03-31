@@ -1,0 +1,19 @@
+$background-white: #ffffff;
+$border-radius: 5px;
+$font-size: 18px;
+
+@mixin HeaderFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 8px;
+    height: 55px;
+    background-color: #0067A3;
+}
+
+@mixin backgroundTasks {
+    background-color: $background-white;
+    padding: 5px;
+    border-radius: $border-radius;
+}

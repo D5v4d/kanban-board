@@ -1,5 +1,7 @@
 body {
-  margin: 0;
+  max-width: 1235px;
+  margin: 0 auto;
+  cursor: default;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +12,9 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+@media screen and (max-width: 338px) {
+  body {background-color: #0079BF;}
 }

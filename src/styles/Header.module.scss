@@ -1,0 +1,95 @@
+@import "./mixin.scss";
+
+.Header {
+    @include HeaderFooter;
+}
+
+.Title {
+    font-size: 28px;
+    color: #ffffff;
+    margin-left: 5px;
+}
+
+.User {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+.ArrowUp {
+    width: 24px;
+    height: 24px;
+    background-image: url(../assets/svg/arrowUp.svg);
+}
+.ArrowDown {
+    width: 24px;
+    height: 24px;
+    background-image: url(../assets/svg/arrowDown.svg);
+}
+
+
+.DropdownButton {
+    display: flex;
+    background: none;
+    border: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.DropdownMenu {
+    position: absolute;
+    z-index: 1;
+    width: 134px;
+    background-color: #ffffff;
+    margin-left: -62px;
+    margin-top: 11px;
+    border-radius: 5px;
+}
+.DropdownMenuArrowUp{
+    width: 16px;
+    height: 8px;
+    background-image: url(../assets/svg/DropdownMenuArrowUp.svg);
+    margin-left: 80px;
+    margin-top: -8px;
+}
+
+.MenuList {
+    list-style: none;
+    line-height: 30px;
+    padding-left: 8px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+
+.MenuList li:hover {
+    display: inline;
+    color: rgb(1, 170, 170);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 338px) {
+    .Header {
+        flex-direction: row-reverse;
+        background: none;
+        padding-right: 0px;
+    }
+
+    .Title {
+        display: none;
+    }
+
+    .DropdownButton {
+        margin-top: 10px;
+        gap: 0px;
+    }
+    .DropdownMenu {
+        margin-left: -69px;
+    }
+    .DropdownMenuArrowUp{
+        margin-left: 87px;
+    }
+}

@@ -1,0 +1,18 @@
+.Conteiner {
+    display: flex;
+    background-color: #0079BF;
+    padding: 20px 20px 32px 20px;
+    justify-content: space-between;
+    min-height: 538px;
+    align-items: flex-start;
+}
+
+
+@media screen and (max-width: 338px) {
+    .Conteiner {
+        flex-direction: column;
+        gap: 50px;
+        padding-top: 107px;
+        padding-bottom: 186px;
+    }
+}

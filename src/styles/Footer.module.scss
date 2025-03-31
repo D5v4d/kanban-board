@@ -1,0 +1,25 @@
+@import "./mixin.scss";
+
+.Footer {
+    @include HeaderFooter;
+    font-size: $font-size;
+    color: #FFFFFF;
+}
+
+.NumberTasks {
+    display: flex;
+    width: 318px;
+    justify-content: space-between;
+    margin-left: 5px;
+}
+
+.KanbanBoard {
+    margin-right: 15px;
+}
+
+
+@media screen and (max-width: 338px) {
+    .Footer {
+        display: none;
+    }
+}
